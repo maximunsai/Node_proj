@@ -10,6 +10,9 @@
         height: 35px;
         background-color: rgb(106, 106, 153);
     }
+    main{
+        padding: 10px;
+    }
     .add-itemlist{
         list-style: none;
         display: flex;
@@ -33,6 +36,30 @@
     .add-items a:active{
         color: rgb(169, 168, 177);
     }
+    .form-product{
+        width: 20rem;
+        max-width: 90%;
+        margin: auto;
+    }
+    .form-control{
+        margin: 10px;
+    }
+    .form-control label,
+    .form-control input{
+      display: block; 
+      width: 100%;
+    }
+    .form-control input{
+        border: 1px solid rgb(236, 165, 165) ;
+        font: inherit;
+        border-radius: 3px;
+    }
+    button{
+        border: 1px solid rgb(54, 53, 53);
+        border-radius: 3px;
+        color: brown;
+        cursor: pointer;
+    }
     </style>
 </head>
 <body>
@@ -46,9 +73,12 @@
    </header>
 
     <main>
-        <form action="/admin/add-product" method="POST">
-         <input type="text" name="title">
-         <button type="submit">Add</button>
+        <form class="form-product" action="/admin/add-product" method="POST">
+         <div class="form-control">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title">
+         </div>
+         <button type="submit">Add-Product</button>
         </form>
     </main>
 </body>
