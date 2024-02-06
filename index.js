@@ -4,13 +4,13 @@ const path = require('path');
 
 const parser = require('body-parser');
 
-const adminRoute = require("./routers/admin");
+const adminData = require("./routers/admin");
 
 const shopRoute = require("./routers/shop");
 
 app.use(parser.urlencoded({extended: false}));
 
-app.use('/admin',adminRoute);
+app.use('/admin', adminData.routes);
 
 app.use(shopRoute);
 
